@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/buttonBrush"
+        android:enabled="true"
+        android:title="@string/label_brush"
+        />
+
+    <item
+        android:id="@+id/buttonDelete"
+        android:enabled="true"
+        android:title="@string/label_sticker"
+        />
+    <item
+        android:id="@+id/buttonRecover"
+        android:enabled="true"
+        android:title="@string/label_recover"
+        />
+    <item
+        android:id="@+id/buttonSticker"
+        android:enabled="true"
+        android:title="Stickers"
+        />
+</menu>
