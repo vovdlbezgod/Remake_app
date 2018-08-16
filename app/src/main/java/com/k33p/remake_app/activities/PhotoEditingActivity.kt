@@ -97,11 +97,11 @@ class PhotoEditingActivity : AppCompatActivity(), OnPhotoEditorListener, Propert
         /*createdBitmapFromBrush = Bitmap.createBitmap(imageView.getSource().getWidth(), imageView.getSource().getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvasColored = new Canvas(createdBitmapFromBrush);
         canvasColored.drawColor(Color.BLACK);*/
-         /*try {
-            secondView!!.setImageBitmap(maskBitmap)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }*/
+        /*try {
+           secondView!!.setImageBitmap(maskBitmap)
+       } catch (e: Exception) {
+           e.printStackTrace()
+       }*/
 
         try {
             imageView!!.source.setImageBitmap(localBitmap)
@@ -128,15 +128,15 @@ class PhotoEditingActivity : AppCompatActivity(), OnPhotoEditorListener, Propert
     }
 
     private fun onNavigationItemSelected(item: MenuItem): Boolean {
-         when (item.itemId) {
-             //R.id.button_image -> null
-             R.id.buttonDelete -> drawBitmap(this, localBitmap, maskBitmap, ::deletingMaskFromSource)
-             R.id.buttonRecover -> drawBitmap(this, localBitmap, maskBitmap, ::getObjectByMask)
-             R.id.buttonBrush -> onBrushButtonPressed()
-             R.id.buttonSticker -> mStickerBSFragment!!.show(supportFragmentManager, mStickerBSFragment!!.getTag()) //это по нажатию кнопки "Stikers" надо выполнять
-         }
-         return true
-     }
+        when (item.itemId) {
+            //R.id.button_image -> null
+            R.id.buttonDelete -> drawBitmap(this, localBitmap, maskBitmap, ::deletingMaskFromSource)
+            R.id.buttonRecover -> drawBitmap(this, localBitmap, maskBitmap, ::getObjectByMask)
+            R.id.buttonBrush -> onBrushButtonPressed()
+            R.id.buttonSticker -> mStickerBSFragment!!.show(supportFragmentManager, mStickerBSFragment!!.getTag()) //это по нажатию кнопки "Stikers" надо выполнять
+        }
+        return true
+    }
 
     private fun onBrushButtonPressed() {
         try {
@@ -225,7 +225,7 @@ class PhotoEditingActivity : AppCompatActivity(), OnPhotoEditorListener, Propert
         else {
             drawBitmapWithAllMasks(this, localBitmap, masks, ::selectingObjectsOnMask)
         }
-        drawBitmap(this, localBitmap, maskBitmap, Color.GREEN, ::selectingObjectOnMask)
+        drawBitmap(this, localBitmap, maskBitmap, Color.BLUE, ::selectingObjectOnMask)
         Log.d(TAG, "$mask")
         return true
     }
